@@ -1,0 +1,953 @@
+:root{
+    --primary-color:#E80000 ;
+    --secondary-color: #242444;
+    --third-color: #f7f7f7;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+table{
+    border-collapse: collapse;
+    min-width: 100%;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* MENU NAV */
+
+.menuNav{
+   border-bottom: 1px solid lightgray;
+   padding: 10px 0;
+   background-color: var(--third-color);
+}
+
+.menuNavItems{
+    display: flex;
+    justify-content: center;
+}
+
+.menuNavItems .menuNavLink{
+    margin: 0 20px;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.menuNavLink.active{
+    color: var(--primary-color);
+}
+
+/* PATIENTS MENU */
+
+.patientsMenu{
+    padding: 30px 0;
+    color: var(--secondary-color);
+    background-color: #fff;
+}
+
+.patientsMenuItems h1{
+    color: var(--secondary-color);
+}
+
+.patientTableWrapper{
+    padding: 20px 0 40px 0;
+}
+
+.addPatientAndSearch{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.addPatientAndSearch .addPatientBtn{
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 7px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.25s ease-in-out;
+    font-size: 1.05rem;
+}
+
+.addPatientAndSearch .addPatientBtn:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.addPatientAndSearch input{
+    width: 0;
+    border: none;
+    font-size: 1.05rem;
+}
+
+.searchAnimation{
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+.searchAnimation.show{
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.searchAnimation.show input{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.searchAnimation input:focus{
+    outline: none;
+}
+
+.searchAnimation button{
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+.patientTable{
+    padding: 10px 0;
+}
+
+.patientTable thead tr th{
+    padding-bottom:  20px;
+    cursor: pointer;
+}
+
+
+.patient{
+    border: 1px solid lightgray;
+}
+
+.patient td{
+    padding: 20px 0;
+}
+
+.noPatientsMsg{
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* PATIENTS MENU MODAL */
+
+.patientsMenuModal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.patientsMenuModalItems{
+    background-color: var(--third-color);
+    width: 80%;
+    height: 80%;
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 40px 30px 40px;
+    overflow-y: auto;
+}
+
+
+.patientsMenuModalItems h1{
+    color: var(--secondary-color);
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.patientsMenuModalForm{
+    width: 100%;
+}
+
+.patientsMenuModalItems input{
+    width: 100%;
+    padding: 10px;
+    margin: 30px 10px 20px 10px;
+}
+
+.patientFormDate{
+    text-align: left;
+    position: relative;
+}
+
+.patientFormDate p{
+    position: absolute;
+    left: 10px;
+}
+
+
+.patientFormName{
+    width: 100%;
+    display: flex;
+}
+
+.patientsFirstName{
+    width: 100%;
+    margin-right: 5px;
+    text-align: left;
+    position: relative;
+}
+
+.patientsFirstName p{
+    position: absolute;
+    left: 10px;
+}
+
+.patientsLastName{
+    width: 100%;
+    margin-left: 5px;
+    text-align: left;
+    position: relative;
+}
+
+.patientsLastName p{
+    position: absolute;
+    left: 10px;
+}
+
+.patientFormContactInfo{
+    display: flex;
+    align-items: center;
+}
+
+.patientsPhoneNumber{
+    width: 100%;
+    text-align: left;
+    margin-right: 5px;
+    position: relative;
+}
+
+.patientsPhoneNumber p{
+    position: absolute;
+    left: 10px;
+}
+
+.patientsEmail{
+    width: 100%;
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+}
+
+.patientsEmail p{
+    position: absolute;
+    left: 10px;
+}
+
+.patientFormInfo{
+    display: flex;
+}
+
+.patientsAge{
+    width: 100%;
+    text-align: left;
+    margin-right: 5px;
+    position: relative;
+}
+
+.patientsAge p{
+    position: absolute;
+    left: 10px;
+}
+
+.patientsWeight{
+    width: 100%;
+    text-align: left;
+    margin: 0 5px;
+    position: relative;
+}
+
+.patientsWeight p{
+    position: absolute;
+    left: 10px;
+}
+
+.patientsHeight{
+    width: 100%;
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+}
+
+.patientsHeight p{
+    left: 10px;
+    position: absolute;
+}
+
+
+.patientsMenuModalItems input:focus{
+    outline: none;
+}
+
+.patientsMenuModalItems .addPatient{
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 7px 25px;
+    margin-top: 20px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.patientsMenuModalItems .addPatient:hover{
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.selectRoom{
+    margin: 10px 0;
+}
+
+.selectRoom label{
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.closeAddPatient{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    display: flex;
+    padding: 5px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.closeAddPatient:hover{
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.patientsModalError{
+    color: red;
+    font-size: 0.8rem;
+}
+
+.selectGender label{
+    margin-right: 10px;
+}
+
+/* PATIENT ADDED MODAL */
+
+.patientAddedModal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.patientAddedModalItems{
+    background-color: var(--third-color);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.patientAddedModalItems h1{
+    margin-bottom: 10px;
+}
+
+.patientAddedModalItems button{
+    background-color: transparent;
+    padding: 7px 15px;
+    border: 1px solid var(--secondary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.patientAddedModalItems button:hover{
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+/* Contact Employees */
+
+/* DOCTORS */
+
+.employeesInfo{
+    padding-bottom: 30px;
+}
+
+.contactEmployees{
+    padding-bottom: 40px;
+}
+
+.employeesHeader{
+    color: var(--secondary-color);
+    margin: 30px 0;
+}
+
+.doctorsHeader{
+    color: var(--third-color);
+    margin: 0 0 0 0;
+    background-color: var(--secondary-color);
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.doctorsHeader h2{
+    transition: all 0.25s ease;
+}
+
+.doctorsHeader h2.rotate{
+    transform: rotate(-90deg);
+}
+
+.doctors{
+    height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.doctors.show{
+    height: 2050px;
+}
+
+.doctor{
+    background-color: var(--third-color);
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.doctorsName{
+    text-align: left;
+}
+
+.nameAndNumber{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.nameAndNumber h3{
+    margin: 5px 0;
+}
+
+.emailAndShift{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.emailAndShift h3{
+    margin: 5px 0;
+}
+
+.doctorsEmail{
+    text-align: left;
+}
+
+/* NURSES */
+
+.nursesContact{
+    margin-top: 20px;
+}
+
+.nurses{
+    height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.nurses.show{
+    height: 2900px;
+}
+
+.nursesFloor{
+    display: flex;
+    align-items: center;
+}
+
+.nursesFloor h3{
+    margin-right: 5px;
+}
+
+/* CNAs */
+
+.cnas{
+    height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.cnas.show{
+    height: 1500px;
+}
+
+/* OTHER EMPLOYEES */
+
+.otherEmployees{
+    height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.otherEmployees.show{
+    height: 1500px;
+}
+
+/* DASHBOARD */
+
+.homeDashboard{
+    padding: 20px 0;
+}
+
+
+.homeDashboardItems{
+    padding:20px 0;
+}
+
+.homeDashboardItems h1{
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.homeDashboardItems p{
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.dashboardFirstRow{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dashboardCharts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dashboardBottomRow{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+/* TOTAL PATIENTS DASH ITEM */
+
+.totalPatientsDash{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.totalPatientsDash h2{
+    margin: 10px 0;
+}
+
+/* CURRENT NURSES DASH */
+
+.currentNursesDash{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.currentNursesDash h2{
+    margin: 10px 0;
+}
+
+/* CURRENT DOCTORS DASH */
+
+.currentDoctorsDash{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.currentDoctorsDash h2{
+    margin:10px 0 ;
+}
+
+/* Current CNAS */
+
+.currentCnas{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.currentCnas h2{
+    margin: 10px 0;
+}
+
+/* Patients Gender Chart */
+
+.patientsGenderChart{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.patientsGenderChartItems{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.patientsGenderChartItems h2{
+    margin-bottom: 10px;
+}
+
+/* PATIENTS AGE CHART */
+
+.patientsAgeChart{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.patientAgeChartItems{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patientAgeChartItems h2{
+    margin-bottom: 10px;
+}
+
+/* Patient Satisfaction Chart */
+
+.patientSatisfaction{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.patientSatisfactionItems{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patientSatisfactionItems h2{
+    margin-bottom: 10px;
+}
+
+/* THIRTY DAY PATIENTS CHART */
+
+.thirtyDayPatientChart{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 3px;
+}
+
+.thirtyDayPatientChartItems{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switchChartBtns{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.switchChartBtns button{
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    padding: 3px;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border-radius: 3px;
+}
+
+.switchChartBtns button.show{
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.switchChartBtns button:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* BED OCCUPANCY RATE */
+
+.bedOccupancyRate{
+    background-color: var(--third-color);
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.bedOccupancyRateItems{
+    text-align: center;
+    height: 100%;
+}
+
+.occupancyRate h2{
+    margin: 10px 0;
+}
+
+.occupancyRate h1{
+    margin: 10px 0;
+    color: #87CEEB;
+}
+
+.occupiedBeds{
+    padding-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: 2px solid lightgray;
+}
+
+.occupiedBeds h3{
+    margin-top: 10px;
+}
+
+.totalBeds{
+    margin-top: 15px;
+}
+
+.totalBeds h3{
+    margin-top: 10px;
+}
+
+/* Recently Admitted */
+
+.recentlyAdmitted{
+    background-color: var(--third-color);
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    height: 320px;
+    color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.recentlyAdmitted h2{
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.recentPatient{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* STAFF MENU */
+
+.staffMenu{
+    padding: 20px 0;
+}
+
+.staffMenuItems{
+    color: var(--secondary-color);
+}
+
+.currentStaffHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currentStaffHeader select{
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    border: none;
+    padding: 5px;
+}
+
+
+.staffMenuItems h1{
+    margin-bottom: 40px;
+}
+
+.staffMenuItems .staffHeader{
+    margin: 20px 0;
+
+}
+
+.staffMenuDoctors{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.staffMenuDoctor{
+    background-color: var(--third-color);
+    margin-right: 15px;
+    display: flex;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.doctorImg img{
+    width: 200px;
+    margin-right: 10px;
+}
+
+.doctorText{
+    margin-top: 20px;
+}
+
+.staffMenuNurses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.staffMenuNurse{
+    background-color: var(--third-color);
+    margin-right: 15px;
+    display: flex;
+    border-top: 5px solid var(--secondary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nurseImg img{
+    width: 200px;
+    margin-right: 10px;
+}
+
+.nurseText{
+    margin-top: 20px;
+}
+
+
+.staffMenuCnas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.staffMenuCna{
+    background-color: var(--third-color);
+    margin-right: 15px;
+    display: flex;
+    border-top: 5px solid var(--secondary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cnaImg img{
+    width: 200px;
+    margin-right: 10px;
+}
+
+.cnaText{
+    margin-top: 20px;
+}
+
+
+
+
+/* UTILITY */
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    overflow: hidden;
+}
+
+
