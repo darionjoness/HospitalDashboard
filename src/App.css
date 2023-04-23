@@ -938,7 +938,61 @@ input[type=number] {
     margin-top: 20px;
 }
 
+/* ROOM SCHEDULER */
 
+.roomsScheduler{
+    padding: 20px 0;
+}
+
+.roomSchedulerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    color: var(--secondary-color);
+}
+
+.roomSchedulerHeader .headerRight h2{
+    margin: 10px 0;
+}
+
+.floor{
+    color: var(--secondary-color);
+}
+
+.floor h2{
+    margin: 15px 0 10px 0;
+}
+
+.floorRooms{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.floorRoom{
+    background-color: var(--third-color);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.floorRoom.closed{
+    background-color: red;
+}
+
+.floorRoom.open{
+    background-color: #4BB543;
+}
+
+.floorRoom h3{
+    margin: 10px 0;
+}
+
+.floorRoom p{
+    margin: 10px 0;
+    font-size: 1rem;
+}
 
 
 /* UTILITY */

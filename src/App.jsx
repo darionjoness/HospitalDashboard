@@ -23,6 +23,7 @@ import CnasContact from './components/CnasContact'
 import OtherEmployeesContact from './components/OtherEmployeesContact'
 import HomeDashboard from './components/HomeDashboard'
 import StaffMenu from './components/StaffMenu'
+import RoomsScheduler from './components/RoomsScheduler'
 
 
 
@@ -71,6 +72,13 @@ function App() {
           <div>
             <MenuNav currentStart={2} />
             <StaffMenu />
+          </div>
+        } />
+
+        <Route path='/rooms' element={
+          <div>
+            <MenuNav currentStart={3} />
+            <RoomsScheduler />
           </div>
         } />
 

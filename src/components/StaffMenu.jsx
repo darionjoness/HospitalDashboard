@@ -37,7 +37,7 @@ const StaffMenu = () => {
                 </div>
             </div>
             {filterSelect == 'All' || filterSelect == 'Doctors' ? <div>
-            <h2 className='staffHeader'>Doctors</h2>
+            <h2 className='staffHeader'>Doctors ({currentDoctors.length})</h2>
             <div className="staffMenuDoctors">
                 {currentDoctors.map((doctor, idx) => (
                     <div className='staffMenuDoctor' key={idx}>
@@ -53,7 +53,7 @@ const StaffMenu = () => {
             </div>
             </div> : ''}
             {filterSelect == 'All' || filterSelect == 'Nurses' ? <div>
-            <h2 className='staffHeader'>Nurses</h2>
+            <h2 className='staffHeader'>Nurses ({currentNurses.length})</h2>
             <div className="staffMenuNurses">
                 {currentNurses.map((nurse, idx) => (
                     <div key={idx} className='staffMenuNurse'>
@@ -69,7 +69,7 @@ const StaffMenu = () => {
             </div>
             </div> : ''}
             {filterSelect == 'All' || filterSelect == 'CNAs' ? <div>
-            <h2 className='staffHeader'>CNAs</h2>
+            <h2 className='staffHeader'>CNAs ({currentCnas.length})</h2>
             <div className="staffMenuCnas">
                 {currentCnas.map((cna, idx) => (
                     <div key={idx} className='staffMenuCna'>
