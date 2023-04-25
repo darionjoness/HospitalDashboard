@@ -150,6 +150,7 @@ input[type=number] {
 
 .patient{
     border: 1px solid lightgray;
+    cursor: pointer;
 }
 
 .patient td{
@@ -417,6 +418,27 @@ input[type=number] {
 .patientAddedModalItems button:hover{
     background-color: var(--secondary-color);
     color: var(--third-color);
+}
+
+/* CURRENT PATIENT INFO */
+
+.currentPatientAppDiv{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.currentPatientInfo{
+    background-color: var(--third-color);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    width: 100%;
+    color: var(--secondary-color);
+    padding: 20px;
+}
+
+.currentPatientSidebar h2{
+    margin: 30px 0;
+    cursor: pointer;
 }
 
 /* Contact Employees */
@@ -731,6 +753,7 @@ input[type=number] {
     text-align: center;
     position: relative;
     border-radius: 3px;
+    height: 400px;
 }
 
 .thirtyDayPatientChartItems{
@@ -741,9 +764,7 @@ input[type=number] {
 }
 
 .switchChartBtns{
-    position: absolute;
-    right: 10px;
-    top: 15px;
+    text-align: right;
 }
 
 .switchChartBtns button{
@@ -818,9 +839,10 @@ input[type=number] {
     padding: 15px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
     overflow-y: auto;
-    height: 320px;
+    height: 400px;
     color: var(--secondary-color);
     border-radius: 3px;
+
 }
 
 .recentlyAdmitted h2{
@@ -891,6 +913,10 @@ input[type=number] {
     margin-top: 20px;
 }
 
+.doctorText p{
+    margin: 10px 0;
+}
+
 .staffMenuNurses{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -912,6 +938,10 @@ input[type=number] {
 
 .nurseText{
     margin-top: 20px;
+}
+
+.nurseText p{
+    margin: 10px 0;
 }
 
 
@@ -936,6 +966,10 @@ input[type=number] {
 
 .cnaText{
     margin-top: 20px;
+}
+
+.cnaText p{
+    margin: 10px 0;
 }
 
 /* ROOM SCHEDULER */
@@ -1004,4 +1038,97 @@ input[type=number] {
     overflow: hidden;
 }
 
+/* MEDIA QUERIES */
+
+@media(max-width:1300px){
+    /* Dashboard */
+    .dashboardBottomRow{
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .thirtyDayPatientChart{
+       grid-column: 1 / span 3;
+    }
+}
+
+@media(max-width: 1100px){
+    /* Dashboard */
+    .dashboardCharts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media(max-width: 968px){
+    /* Dashboard */
+    .homeDashboardItems{
+        text-align: center;
+    }
+
+    .dashboardFirstRow{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .thirtyDayPatientChart{
+        width: 90%;
+        margin: 20px auto 0px auto;
+    }
+
+    .patientSatisfaction{
+        width: 90%;
+        margin: 20px auto 0px auto;
+    }
+
+    .patientsAgeChart{
+        width: 90%;
+        margin: 20px auto 0px auto;
+    }
+
+    .patientsGenderChart{
+        width: 90%;
+        margin: 20px auto 0px auto;
+    }
+}
+
+@media(max-width: 868px){
+    /* Dashboard */
+    .dashboardBottomRow{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .thirtyDayPatientChart{
+        grid-column: auto;
+     }
+}
+
+@media(max-width: 668px){
+    /* Dashboard */
+    .thirtyDayPatientChart{
+        height: 300px;
+    }
+
+    .menuNavItems .menuNavLink{
+       margin: 0 10px;
+    }
+
+    .recentlyAdmitted{
+        height: 300px;
+    }
+}
+
+@media(max-width: 568px){
+    /* DASHBOARD */
+    .menuNavItems .menuNavLink{
+        margin: 0 7px;
+    }
+}
+
+@media(max-width: 468px){
+    /* Dashboard */
+    .dashboardFirstRow{
+        grid-template-columns: 1fr;
+    }
+}
 

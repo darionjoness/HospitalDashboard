@@ -5,7 +5,8 @@ const otherEmployees = [
     email: "emily.davis@example.com",
     shift: "day",
     jobTitle: "Custodian",
-    image: "https://randomuser.me/api/portraits/women/15.jpg"
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    badgeNumber: '39029'
   },
   {
     name: "Adam Green",
@@ -13,7 +14,8 @@ const otherEmployees = [
     email: "adam.green@example.com",
     shift: "night",
     jobTitle: "Administrative Assistant",
-    image: "https://randomuser.me/api/portraits/men/19.jpg"
+    image: "https://randomuser.me/api/portraits/men/19.jpg",
+    badgeNumber: '90193'
   },
   {
     name: "Olivia Johnson",
@@ -21,7 +23,8 @@ const otherEmployees = [
     email: "olivia.johnson@example.com",
     shift: "day",
     jobTitle: "Front Desk Coordinator",
-    image: "https://randomuser.me/api/portraits/women/20.jpg"
+    image: "https://randomuser.me/api/portraits/women/20.jpg",
+    badgeNumber: '20844'
   },
   {
     name: "Ryan Thomas",
@@ -29,7 +32,8 @@ const otherEmployees = [
     email: "ryan.thomas@example.com",
     shift: "night",
     jobTitle: "Security Officer",
-    image: "https://randomuser.me/api/portraits/men/22.jpg"
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
+    badgeNumber: '00340'
   },
   {
     name: "Sophia Wilson",
@@ -37,7 +41,8 @@ const otherEmployees = [
     email: "sophia.wilson@example.com",
     shift: "day",
     jobTitle: "Data Entry Clerk",
-    image: "https://randomuser.me/api/portraits/women/33.jpg"
+    image: "https://randomuser.me/api/portraits/women/33.jpg",
+    badgeNumber: '29993'
   },
   {
     name: "William Rodriguez",
@@ -45,7 +50,8 @@ const otherEmployees = [
     email: "william.rodriguez@example.com",
     shift: "night",
     jobTitle: "Facilities Coordinator",
-    image: "https://randomuser.me/api/portraits/men/37.jpg"
+    image: "https://randomuser.me/api/portraits/men/37.jpg",
+    badgeNumber: '76566'
   },
   {
     name: "Isabella Hernandez",
@@ -53,7 +59,8 @@ const otherEmployees = [
     email: "isabella.hernandez@example.com",
     shift: "day",
     jobTitle: "Human Resources Assistant",
-    image: "https://randomuser.me/api/portraits/women/48.jpg"
+    image: "https://randomuser.me/api/portraits/women/48.jpg",
+    badgeNumber: '23232'
   },
   {
     name: "Ethan Lee",
@@ -61,7 +68,8 @@ const otherEmployees = [
     email: "ethan.lee@example.com",
     shift: "night",
     jobTitle: "Technical Support Specialist",
-    image: "https://randomuser.me/api/portraits/men/43.jpg"
+    image: "https://randomuser.me/api/portraits/men/43.jpg",
+    badgeNumber: '77712'
   },
   {
     name: "Ava Garcia",
@@ -69,7 +77,8 @@ const otherEmployees = [
     email: "ava.garcia@example.com",
     shift: "day",
     jobTitle: "Marketing Coordinator",
-    image: "https://randomuser.me/api/portraits/women/52.jpg"
+    image: "https://randomuser.me/api/portraits/women/52.jpg",
+    badge: '32942'
   },
   {
     name: "Jacob Martinez",
@@ -77,7 +86,8 @@ const otherEmployees = [
     email: "jacob.martinez@example.com",
     shift: "night",
     jobTitle: "Inventory Control Specialist",
-    image: "https://randomuser.me/api/portraits/men/50.jpg"
+    image: "https://randomuser.me/api/portraits/men/50.jpg",
+    badgeNumber: '32427'
   },
   {
     name: "Mia Jones",
@@ -85,7 +95,8 @@ const otherEmployees = [
     email: "mia.jones@example.com",
     shift: "day",
     jobTitle: "Billing Specialist",
-    image: "https://randomuser.me/api/portraits/women/66.jpg"
+    image: "https://randomuser.me/api/portraits/women/66.jpg",
+    badgeNumber: '90543'
   },
     {
       name: "Benjamin Hernandez",
@@ -93,7 +104,8 @@ const otherEmployees = [
       email: "benjamin.hernandez@example.com",
       shift: "night",
       jobTitle: "Facilities Technician",
-      image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+      image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+      badgeNumber: '10393'
     },
     {
       name: "Charlotte Davis",
@@ -101,7 +113,8 @@ const otherEmployees = [
       email: "charlotte.davis@example.com",
       shift: "day",
       jobTitle: "Office Manager",
-      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+      badgeNumber: '83822'
     }
   ];
 

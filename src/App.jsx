@@ -24,6 +24,7 @@ import OtherEmployeesContact from './components/OtherEmployeesContact'
 import HomeDashboard from './components/HomeDashboard'
 import StaffMenu from './components/StaffMenu'
 import RoomsScheduler from './components/RoomsScheduler'
+import CurrentPatientInfo from './components/CurrentPatientInfo'
 
 
 
@@ -90,6 +91,12 @@ function App() {
             <NursesContact />
             <CnasContact />
             <OtherEmployeesContact />
+          </div>
+        } />
+
+        <Route path='/currentPatientInfo' element={
+          <div className='currentPatientAppDiv'>
+            <CurrentPatientInfo />
           </div>
         } />
       </Routes>

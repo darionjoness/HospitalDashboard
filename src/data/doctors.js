@@ -5,7 +5,8 @@ const doctors = [
     email: "john.smith@example.com",
     shift: "day",
     specialty: "Cardiologist",
-    image: "https://randomuser.me/api/portraits/men/21.jpg"
+    image: "https://randomuser.me/api/portraits/men/21.jpg",
+    badgeNumber: '74833'
   },
   {
     name: "Dr. Sarah Johnson",
@@ -13,7 +14,8 @@ const doctors = [
     email: "sarah.johnson@example.com",
     shift: "night",
     specialty: "Neurologist",
-    image: "https://randomuser.me/api/portraits/women/27.jpg"
+    image: "https://randomuser.me/api/portraits/women/27.jpg",
+    badgeNumber: '00324'
   },
   {
     name: "Dr. Michael Davis",
@@ -21,7 +23,8 @@ const doctors = [
     email: "michael.davis@example.com",
     shift: "day",
     specialty: "Gastroenterologist",
-    image: "https://randomuser.me/api/portraits/men/39.jpg"
+    image: "https://randomuser.me/api/portraits/men/39.jpg",
+    badgeNumber: '20639'
   },
   {
     name: "Dr. Jennifer Lee",
@@ -29,7 +32,8 @@ const doctors = [
     email: "jennifer.lee@example.com",
     shift: "night",
     specialty: "Oncologist",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    badgeNumber: '12333'
   },
   {
     name: "Dr. James Wilson",
@@ -37,7 +41,8 @@ const doctors = [
     email: "james.wilson@example.com",
     shift: "day",
     specialty: "Dermatologist",
-    image: "https://randomuser.me/api/portraits/men/50.jpg"
+    image: "https://randomuser.me/api/portraits/men/50.jpg",
+    badgeNumber: '55244'
   },
   {
     name: "Dr. Emily Brown",
@@ -45,7 +50,8 @@ const doctors = [
     email: "emily.brown@example.com",
     shift: "night",
     specialty: "Psychiatrist",
-    image: "https://randomuser.me/api/portraits/women/69.jpg"
+    image: "https://randomuser.me/api/portraits/women/69.jpg",
+    badgeNumber: '73738'
   },
   {
     name: "Dr. William Clark",
@@ -53,7 +59,8 @@ const doctors = [
     email: "william.clark@example.com",
     shift: "day",
     specialty: "Pediatrician",
-    image: "https://randomuser.me/api/portraits/men/72.jpg"
+    image: "https://randomuser.me/api/portraits/men/72.jpg",
+    badgeNumber: '12003'
   },
   {
     name: "Dr. Elizabeth Taylor",
@@ -61,7 +68,8 @@ const doctors = [
     email: "elizabeth.taylor@example.com",
     shift: "night",
     specialty: "Obstetrician/Gynecologist",
-    image: "https://randomuser.me/api/portraits/women/8.jpg"
+    image: "https://randomuser.me/api/portraits/women/8.jpg",
+    badgeNumber: '45433'
   },
   {
     name: "Dr. Christopher Green",
@@ -69,7 +77,8 @@ const doctors = [
     email: "christopher.green@example.com",
     shift: "day",
     specialty: "Orthopedic Surgeon",
-    image: "https://randomuser.me/api/portraits/men/9.jpg"
+    image: "https://randomuser.me/api/portraits/men/9.jpg",
+    badgeNumber: '98632'
   },
   {
     name: "Dr. Samantha Adams",
@@ -77,7 +86,8 @@ const doctors = [
     email: "samantha.adams@example.com",
     shift: "night",
     specialty: "ENT Specialist",
-    image: "https://randomuser.me/api/portraits/women/10.jpg"
+    image: "https://randomuser.me/api/portraits/women/10.jpg",
+     badgeNumber: '19934'
   },
   {
     name: "Dr. Benjamin Moore",
@@ -85,7 +95,8 @@ const doctors = [
     email: "benjamin.moore@example.com",
     shift: "day",
     specialty: "Urologist",
-    image: "https://randomuser.me/api/portraits/men/11.jpg"
+    image: "https://randomuser.me/api/portraits/men/11.jpg",
+    badgeNumber: '33211'
   },
   {
     name: "Dr. Olivia Anderson",
@@ -93,7 +104,8 @@ const doctors = [
     email: "olivia.anderson@example.com",
     shift: "night",
     specialty: "Endocrinologist",
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    badgeNumber: '66930'
   },
   {
     name: "Dr. Nicholas King",
@@ -102,6 +114,7 @@ const doctors = [
     shift: "day",
     specialty: "Rheumatologist",
     image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    badgeNumber: '23321'
   },
   {
     name: "Dr. Ava Hernandez",
@@ -109,7 +122,8 @@ const doctors = [
     email: "ava.hernandez@example.com",
     shift: "night",
     specialty: "Hematologist",
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    badgeNumber: '44202'
   },
   {
     name: "Dr. Ethan Brown",
@@ -117,7 +131,8 @@ const doctors = [
     email: "ethan.brown@example.com",
     shift: "day",
     specialty: "General Practitioner",
-    image: 'https://images.unsplash.com/photo-1622902046580-2b47f47f5471?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+    image: 'https://images.unsplash.com/photo-1622902046580-2b47f47f5471?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    badgeNumber: '99383'
   }
 ];
 

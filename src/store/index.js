@@ -7,6 +7,7 @@ import nursesSlice from "./nursesSlice";
 import cnasSlice from "./cnasSlice";
 import otherEmployeesSlice from "./otherEmployeesSlice";
 import patientChartSlice from "./patientChartSlice";
+import currentPatientSlice from "./currentPatientSlice";
 
 const store = configureStore({
     reducer: {
@@ -33,6 +34,10 @@ const store = configureStore({
 
         // State for patient 30 day chart data
         patientChartData: patientChartSlice.reducer,
+
+        // State for the current patient selected
+        currentPatient: currentPatientSlice.reducer,
+
     }
 })
 

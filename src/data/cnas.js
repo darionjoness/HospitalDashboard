@@ -5,7 +5,8 @@ const cnas = [
     email: "emily.baker@example.com",
     floor: 1,
     shift: "day",
-    image: "https://randomuser.me/api/portraits/women/1.jpg"
+    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    badgeNumber: '28939'
   },
   {
     name: "Michael Green",
@@ -13,7 +14,8 @@ const cnas = [
     email: "michael.green@example.com",
     floor: 2,
     shift: "night",
-    image: "https://randomuser.me/api/portraits/men/1.jpg"
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    badgeNumber: '40984'
   },
   {
     name: "Olivia Flores",
@@ -21,7 +23,8 @@ const cnas = [
     email: "olivia.flores@example.com",
     floor: 1,
     shift: "day",
-    image: "https://randomuser.me/api/portraits/women/2.jpg"
+    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    badgeNumber: '12994'
   },
   {
     name: "Christopher Ramirez",
@@ -29,7 +32,8 @@ const cnas = [
     email: "christopher.ramirez@example.com",
     floor: 3,
     shift: "night",
-    image: "https://randomuser.me/api/portraits/men/2.jpg"
+    image: "https://randomuser.me/api/portraits/men/2.jpg",
+    badgeNumber: '08374'
   },
   {
     name: "Madison Evans",
@@ -37,7 +41,8 @@ const cnas = [
     email: "madison.evans@example.com",
     floor: 4,
     shift: "day",
-    image: "https://randomuser.me/api/portraits/women/3.jpg"
+    image: "https://randomuser.me/api/portraits/women/3.jpg",
+    badgeNumber: '56938'
   },
   {
     name: "William Parker",
@@ -45,7 +50,8 @@ const cnas = [
     email: "william.parker@example.com",
     floor: 2,
     shift: "night",
-    image: "https://randomuser.me/api/portraits/men/3.jpg"
+    image: "https://randomuser.me/api/portraits/men/3.jpg",
+    badgeNumber: '42874'
   },
   {
     name: "Avery Cooper",
@@ -53,7 +59,8 @@ const cnas = [
     email: "avery.cooper@example.com",
     floor: 5,
     shift: "day",
-    image: "https://randomuser.me/api/portraits/women/4.jpg"
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    badgeNumber: '90398'
   },
   {
     name: "Ethan Torres",
@@ -61,7 +68,8 @@ const cnas = [
     email: "ethan.torres@example.com",
     floor: 1,
     shift: "night",
-    image: "https://randomuser.me/api/portraits/men/4.jpg"
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+    badgeNumber: '29485'
   },
   {
     name: "Natalie Peterson",
@@ -69,7 +77,8 @@ const cnas = [
     email: "natalie.peterson@example.com",
     floor: 3,
     shift: "day",
-    image: "https://randomuser.me/api/portraits/women/5.jpg"
+    image: "https://randomuser.me/api/portraits/women/5.jpg",
+    badgeNumber: '56930'
   },
   {
     name: "David Collins",
@@ -77,7 +86,8 @@ const cnas = [
     email: "david.collins@example.com",
     floor: 4,
     shift: "night",
-    image: "https://randomuser.me/api/portraits/men/5.jpg"
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    badgeNumber: '06738'
   }
 ];
 

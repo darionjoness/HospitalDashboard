@@ -7,6 +7,8 @@ import { patientActions } from '../store/patientsSlice';
 import { BsPersonAdd } from "react-icons/bs";
 import PatientsMenuModal from './PatientsMenuModal';
 import PatientAddedModal from './PatientAddedModal';
+import { currentPatientActions } from '../store/currentPatientSlice';
+import { useNavigate } from 'react-router-dom';
 
 const PatientsMenu = () => {
   const [toggleSearch, setToggleSearch] = useState(false);
@@ -16,6 +18,9 @@ const PatientsMenu = () => {
   const [nowOpenRooms, setNowOpenRooms] = useState([])
   const [genderValue, setGenderValue] = useState('Male')
   const [patientAdded, setPatientAdded] = useState(false)
+
+  // setup navigate hook
+  const navigate = useNavigate()
 
   // Setup dispatch hook
   const dispatch = useDispatch();
@@ -147,6 +152,21 @@ const PatientsMenu = () => {
     // setPatientAdded to false
     setPatientAdded(false)
   }
+
+  // Create setCurrentPatient function
+  const setCurrentPatient = (patient) => {
+    // Dispatch the patient to the store
+    dispatch(currentPatientActions.setCurrentPatient(patient))
+
+    // Navigate to /currentPatientInfo
+    navigate('/currentPatientInfo')
+  }
+
+  const currentPatient = useSelector((state) => state.currentPatient.currentPatient)
+
+  useEffect(() => {
+    console.log(currentPatient)
+  }, [currentPatient])
   
     return (
       <div className='patientsMenu'>
@@ -196,7 +216,7 @@ const PatientsMenu = () => {
               </thead>
               <tbody>
                 {sortedPatients.map((patient, idx) => (
-                  <tr className='patient' key={patient.id}>
+                  <tr onClick={() => setCurrentPatient(patient)} className='patient' key={patient.id}>
                     <td>{patient.name}</td>
                     <td>{patient.age}</td>
                     <td>#{patient.roomNumber}</td>

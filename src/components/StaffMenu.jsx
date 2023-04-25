@@ -47,6 +47,7 @@ const StaffMenu = () => {
                         <div className="doctorText">
                             <h3>{doctor.name}</h3>
                             <p>{doctor.specialty}</p>
+                            <p><strong>Badge # </strong>{doctor.badgeNumber}</p>
                         </div>
                     </div>
                 ))}
@@ -63,6 +64,7 @@ const StaffMenu = () => {
                         <div className="nurseText">
                             <h3>{nurse.name}</h3>
                             <p>{nurse.shift}</p>
+                            <p><strong>Badge #</strong> {nurse.badgeNumber}</p>
                         </div>
                     </div>
                 ))}
@@ -79,6 +81,7 @@ const StaffMenu = () => {
                         <div className="cnaText">
                             <h3>{cna.name}</h3>
                             <p>{cna.shift}</p>
+                            <p><strong>Badge #</strong> {cna.badgeNumber}</p>
                         </div>
                     </div>
                 ))}
