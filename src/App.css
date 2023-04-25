@@ -422,24 +422,73 @@ input[type=number] {
 
 /* CURRENT PATIENT INFO */
 
-.currentPatientAppDiv{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
-
-.currentPatientInfo{
-    background-color: var(--third-color);
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
-    height: 100vh;
-    width: 100%;
+.currentPatientHeader{
+    margin: 20px 0;
     color: var(--secondary-color);
-    padding: 20px;
 }
 
-.currentPatientSidebar h2{
-    margin: 30px 0;
-    cursor: pointer;
+/* Current Patient PErsonal INfo */
+
+.currentPatientPersonalInfo{
+    
 }
+
+.currentPatientPersonalInfoItems{
+    color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+
+.currentPatientImg{
+    text-align: center;
+}
+
+.currentPatientImg{
+    background-color: var(--third-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.currentPatientNameAndId{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.currentPatientNameAndId h2{
+    margin: 10px 0;
+}
+
+.currentPatientImg img{
+    width: 100%;
+    height: 300px;
+}
+
+.currentPatientText{
+    background-color: var(--third-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.currentPatientText h1{
+    margin: 10px 0;
+}
+
+.generalInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generalInfo h2{
+    margin: 20px 0;
+}
+
 
 /* Contact Employees */
 
@@ -1058,6 +1107,18 @@ input[type=number] {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .staffMenuDoctors{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .staffMenuNurses{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .staffMenuCnas{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
 
 @media(max-width: 968px){
@@ -1116,6 +1177,22 @@ input[type=number] {
     .recentlyAdmitted{
         height: 300px;
     }
+
+    .roomSchedulerItems{
+        text-align: center;
+    } 
+
+    .roomSchedulerHeader{
+       flex-direction: column;
+    }
+
+    .floorRooms{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 }
 
 @media(max-width: 568px){

@@ -28,6 +28,7 @@ import CurrentPatientInfo from './components/CurrentPatientInfo'
 
 
 
+
 function App() {
 
   // Setup dispatch hook
@@ -95,7 +96,7 @@ function App() {
         } />
 
         <Route path='/currentPatientInfo' element={
-          <div className='currentPatientAppDiv'>
+          <div>
             <CurrentPatientInfo />
           </div>
         } />
