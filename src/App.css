@@ -422,73 +422,184 @@ input[type=number] {
 
 /* CURRENT PATIENT INFO */
 
+.currentPatientInfo{
+    padding: 20px 0;
+}
+
+.currentPatientBackBtn{
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
 .currentPatientHeader{
     margin: 20px 0;
     color: var(--secondary-color);
 }
 
+.currentPatientInfoDiv{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.currentPatientVitals{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 /* Current Patient PErsonal INfo */
 
-.currentPatientPersonalInfo{
-    
-}
 
 .currentPatientPersonalInfoItems{
-    color: var(--secondary-color);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-
-.currentPatientImg{
-    text-align: center;
-}
-
-.currentPatientImg{
+    display: flex;
     background-color: var(--third-color);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    height: 360px;
+}
+
+.currentPatientGeneralInfo{
+    padding: 10px;
+    width: 100%;
 }
 
 .currentPatientNameAndId{
     display: flex;
-    flex-direction: column;
-    margin-right: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .currentPatientNameAndId h2{
-    margin: 10px 0;
+    margin: 5px 0;
+    margin-right: 10px;
+}
+
+.currentPatientImg{
+    margin-right: 20px;
 }
 
 .currentPatientImg img{
     width: 100%;
-    height: 300px;
+    height: 100%;
 }
 
-.currentPatientText{
+.currentPatientInfoItem{
+    margin: 20px 0;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+/* Current Patient Contact Info */
+
+.currentPatientContactInfoItems{
+  background-color: var(--third-color);
+  color: var(--secondary-color);
+  height: 360px;
+  padding: 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Current Patient Vitals */
+
+.patientVitalsItems{
     background-color: var(--third-color);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
     padding: 10px;
 }
 
-.currentPatientText h1{
+.patientVitals{
+    display: flex;
+    justify-content: center;
+}
+
+.patientVital{
+    margin: 0 10px;
+}
+
+.patientVital h3{
     margin: 10px 0;
 }
 
-.generalInfo{
+.patientSymbolAndRate{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.generalInfo h2{
-    margin: 20px 0;
+.patientSymbolAndRate h2{
+    margin-right: 10px;
+    color: var(--primary-color);
 }
 
+/* Patient Medicines */
+
+.patientMedicinesItems{
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.patientMedicines{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.patientMedicine{
+    margin: 0 15px;
+}
+
+.pillBottle{
+    color: var(--primary-color);
+}
+
+.medDosage p{
+    margin: 5px 0;
+}
+
+/* Current Patient Family Members */
+
+.familyMembersItems{
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    width: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.familyMembersItems h1{
+    margin: 10px 0;
+}
+
+.familyMembers{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.familyMember{
+    margin: 10px;
+    width: 50%;
+}
+
+.familyMember h3{
+    margin: 15px 0;
+}
+
+.familyMemberInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--secondary-color);
+}
 
 /* Contact Employees */
 
@@ -1162,6 +1273,23 @@ input[type=number] {
     .thirtyDayPatientChart{
         grid-column: auto;
      }
+
+     .currentPatientInfoDiv{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .currentPatientVitals{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .familyMembers{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .familyMember{
+        width: 100%;
+    }
 }
 
 @media(max-width: 668px){
@@ -1192,6 +1320,11 @@ input[type=number] {
         justify-content: center;
     }
 
+    .patientVitals{
+        flex-direction: column;
+        align-items: center;
+    }
+
 
 }
 
@@ -1200,6 +1333,27 @@ input[type=number] {
     .menuNavItems .menuNavLink{
         margin: 0 7px;
     }
+
+    .currentPatientNameAndId{
+        flex-direction: column;
+    }
+
+    .currentPatientInfoItem{
+        flex-direction: column;
+    }
+
+    .currentPatientPersonalInfoItems{
+        height: 500px;
+    }
+
+    .patientMedicines{
+        flex-direction: column;
+    }
+
+    .patientMedicine{
+        margin: 10px 0;
+    }
+
 }
 
 @media(max-width: 468px){

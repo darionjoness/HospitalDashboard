@@ -179,9 +179,6 @@ const PatientsMenu = () => {
               <button onClick={toggleSearchBar}><AiOutlineSearch /></button>
               <input ref={inputRef} value={searchTerm} onChange={(e) => dispatch(searchTermActions.setSearchInput(e.target.value))}  />
             </div>
-            <button onClick={toggleModal} className='addPatientBtn'>
-              <BsPersonAdd />
-            </button>
           </div>
           <div className="patientTableWrapper">
             {sortedPatients.length > 0 ? <table className='patientTable'>

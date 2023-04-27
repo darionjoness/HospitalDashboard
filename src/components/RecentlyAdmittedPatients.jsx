@@ -15,7 +15,6 @@ const RecentlyAdmittedPatients = () => {
   // Sort the dates in descending order
   const sortedPatients = allPatients.sort((a, b) => new Date(b.dateArrived) - new Date(a.dateArrived));
 
-  console.log(sortedPatients)
 
   // Slice the last 5 patients
   const mostRecentPatients = sortedPatients.slice(0 , 7)

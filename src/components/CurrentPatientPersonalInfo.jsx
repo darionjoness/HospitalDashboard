@@ -9,30 +9,36 @@ const CurrentPatientPersonalInfo = () => {
   return (
     <div className='currentPatientPersonalInfo'>
         <div className="currentPatientPersonalInfoItems">
-            <div className="currentPatientImg">
-                <img src={currentPatient.image} alt="" />
-                <div className="currentPatientNameAndId">
-                    <h2>{currentPatient.name}</h2>
-                    <h2>ID #{currentPatient.id}</h2>
+                <div className="currentPatientImg">
+                    <img src={currentPatient.image} alt="" />
                 </div>
-            </div>
-            <div className="currentPatientText">
-                <h1>General Info</h1>
-                <div className="generalInfo">
-                    <div className="generalInfoLeft">
-                        <h2>Gender: {currentPatient.gender}</h2>
-                        <h2>Age: {currentPatient.age}</h2>
-                        <h2>Height: {currentPatient.height} (in)</h2>
-                        <h2>Weight: {currentPatient.weight} (lbs)</h2>
+                <div className="currentPatientGeneralInfo">
+                    <div className="currentPatientNameAndId">
+                        <h2>{currentPatient.name}</h2>
+                        <h2>ID #{currentPatient.id}</h2>
                     </div>
-                    <div className="generalInfoRight">
-                        <h2>Phone: {currentPatient.phoneNumber}</h2>
-                        <h2>Email: {currentPatient.email}</h2>
-                        <h2>Arrived: {currentPatient.dateArrived}</h2>
-                        <h2>Departure: {currentPatient.departureDate}</h2>
+                    <div className="currentPatientInfoItem">
+                        <p>Age: </p>
+                        <h3>{currentPatient.age}</h3>
                     </div>
+                    <div className="currentPatientInfoItem">
+                        <p>Room #:</p>
+                        <h3>{currentPatient.roomNumber}</h3>
+                    </div>
+                    <div className="currentPatientInfoItem">
+                        <p>Gender:</p>
+                        <h3>{currentPatient.gender}</h3>
+                    </div>
+                    <div className="currentPatientInfoItem">
+                        <p>Height:</p>
+                        <h3>{currentPatient.height} (in)</h3>
+                    </div>
+                    <div className="currentPatientInfoItem">
+                        <p>Weight:</p>
+                        <h3>{currentPatient.weight} (lbs)</h3>
+                    </div>
+                    
                 </div>
-            </div>
         </div>
     </div>
   )
